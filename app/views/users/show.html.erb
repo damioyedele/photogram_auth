@@ -1,30 +1,20 @@
 <div class="page-header">
-  <h3> <%= current_user.username %>'s photos</h3>
+  <h3> <%= current_user.username %>'s profile</h3>
 </div>
 
 <div class="row">
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
-      <dt>Caption</dt>
-      <dd><%= @photo.find %></dd>
-
-      <dt>Image</dt>
-      <dd><%= @photo.image %></dd>
-
-      <dt>User</dt>
-      <dd><%= @photo.user_id %></dd>
-
+      <dt>Photos</dt>
+      <dd><%= @userphotos %></dd>
     </dl>
 
     <div class="btn-group btn-group-justified">
-      <a href="/photos" class="btn btn-primary">
+      <a href="/users" class="btn btn-primary">
         Back
       </a>
-      <a href="/photos/<%= @photo.id %>/edit" class="btn btn-warning">
+      <a href="/users/<%= current_user.id %>/edit" class="btn btn-warning">
         Edit
-      </a>
-      <a href="/delete_photo/<%= @photo.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
       </a>
     </div>
   </div>

@@ -12,11 +12,11 @@ class UsersController < ApplicationController
 
       @user = User.find(params[:id])
 
+      @photo.user_id = params[:user_id]
+
+      @userphotos = @photo.user_id
+
       render("users/show.html.erb")
-
-      @photo = Photo.find(params[:id])
-
-      render("photos/show.html.erb")
 
     end
 end

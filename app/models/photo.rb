@@ -14,4 +14,6 @@ class Photo < ApplicationRecord
   # Validations ->  user_id: presence
   validates :user_id, :presence => true, :uniqueness => { :scope => :username }
 
+  mount_uploader :photo, PhotoUploader
+
 end

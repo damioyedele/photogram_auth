@@ -9,5 +9,12 @@
 <div>
   <h2>
     List of users goes here!
+    <%=current_user.username%>
   </h2>
+</div>
+
+<div>
+  <h3>
+    <%=@users.each do |user|%> <% end %>
+  </h3>
 </div>

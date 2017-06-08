@@ -56,13 +56,24 @@ Rails.application.routes.draw do
 
   # READ
   get "/users", :controller => "users", :action => "index"
-  get "/users/:id", :controller => "users", :action => "show" 
+  get "/users/:id", :controller => "users", :action => "show"
+
+
+
+  # Routes for the Likes resource:
+
+  # READ
+  get "/my_likes", :controller => "likes", :action => "index"
+  get "/my_likes/:id", :controller => "likes", :action => "show"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 
   # Dami O -->> Ensure you have defined root_url to *something* in your config/routes.rb.:
 
   root "photos#index"
+
+
 
 
 
